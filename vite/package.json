@@ -1,0 +1,19 @@
+{
+  "name": "luckyexcel-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.6",
+    "jszip": "^3.5.0",
+    "exceljs": "4.4.0",
+    "xlsx-js-style": "1.2.0"
+  }
+}

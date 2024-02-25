@@ -21,3 +21,6 @@ pnpm-debug.log*
 *.sw?
 
 dist
+vite/dist
+vite/output
+output
