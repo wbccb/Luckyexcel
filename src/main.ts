@@ -6,6 +6,7 @@ import {ExcelFile as ExceljsFile} from './toExceljs/ExcelFile'
 import {IuploadfileList} from "./ICommon";
 import {ExcelFile} from './toExcel/ExcelFile'
 
+
 export class LuckyExcel {
   static transformExcelToLucky(excelFile: File,
                                callback?: (files: IuploadfileList, fs?: string) => void,
@@ -65,7 +66,8 @@ export class LuckyExcel {
     }
   }
 
-  static transformLuckyToExcelBlob(luckysheetJson: any, fileName: string, callBack?: (files: any, blobData: Blob) => void, errorHandler?: (err: Error) => void) {
+
+  static transformLuckyToExcelBlob(luckysheetJson: any, fileName: string, callBack?: (files: any, blobData: any) => void, errorHandler?: (err: Error) => void) {
     try {
       const excelFile = new ExceljsFile(luckysheetJson)
       excelFile.exportBlob().then((blobData: any) => {
@@ -90,3 +92,5 @@ export class LuckyExcel {
     });
   }
 }
+// @ts-ignore
+window.LuckyExcel = LuckyExcel;
